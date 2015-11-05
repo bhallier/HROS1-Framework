@@ -1,7 +1,6 @@
 SUBDIRS := $(wildcard */.)
 
-.PHONY : all $(SUBDIRS)
-all : $(SUBDIRS)
-
-$(SUBDIRS) :
-	$(MAKE) -C $@ all
+subdirs:
+		for dir in $(SUBDIRS); do \
+			$(MAKE) -C $$dir; \
+		done
