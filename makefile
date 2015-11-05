@@ -4,4 +4,4 @@ SUBDIRS := $(wildcard */.)
 all : $(SUBDIRS)
 
 $(SUBDIRS) :
-	$(MAKE) -C $@ clean all
+	$(MAKE) -C $@ all
