@@ -1,2 +1,2 @@
 subsystem:
-	cd ./subdir && $(MAKE)
+	cd subdir && $(MAKE)
