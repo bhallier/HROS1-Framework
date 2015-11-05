@@ -2,5 +2,5 @@ SUBDIRS = 'Framework\src\commander' 'Framework\src\controller' 'Linux\build' 'Li
 
 subdirs:
 	for dir in $(SUBDIRS); do \
-		make $$dir; \
+		make -C $$dir; \
 	done
