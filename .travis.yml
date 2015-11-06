@@ -1,4 +1,8 @@
+before_install:
+  - sudo apt-get install libbluetooth-dev
+  
 language: cpp
+
 compiler:
   - gcc
 script: make
