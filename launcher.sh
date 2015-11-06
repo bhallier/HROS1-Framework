@@ -1,34 +1,24 @@
-#!/bin/bash
-
-HEIGHT=15
-WIDTH=40
-CHOICE_HEIGHT=4
-BACKTITLE="Backtitle here"
-TITLE="Title here"
-MENU="Choose one of the following options:"
-
-OPTIONS=(1 "walk_tuner"
-         2 "Option 2"
-         3 "Option 3")
-
-CHOICE=$(dialog --clear \
-                --backtitle "$BACKTITLE" \
-                --title "$TITLE" \
-                --menu "$MENU" \
-                $HEIGHT $WIDTH $CHOICE_HEIGHT \
-                "${OPTIONS[@]}" \
-                2>&1 >/dev/tty)
+title="Select the executable to run..."
+prompt="Pick an option:"
+options=("walk_tuner" "dxl_monitor" "rme" "ps3_demo")
 
 clear
-case $CHOICE in
-        1)
-            echo "You chose walk_tuner"
-			./Linux/project/walk_tuner/walk_tuner
-            ;;
-        2)
-            echo "You chose Option 2"
-            ;;
-        3)
-            echo "You chose Option 3"
-            ;;
-esac
+
+echo "$title"
+PS3="$prompt "
+select opt in "${options[@]}" "Quit"; do 
+
+    case "$REPLY" in
+
+    1 ) ./Linux/project/walk_tuner/walk_tuner; break;;
+    2 ) ./Linux/project/dxl_monitor/dxl_monitor; break;;
+    3 ) ./Linux/project/rme/rme; break;;
+	4 ) ./Linux/project/ps3_demo/start_rpi; break;;
+
+
+    $(( ${#options[@]}+1 )) ) echo "Goodbye!"; break;;
+    *) echo "Invalid option. Try another one.";continue;;
+
+    esac
+
+done
