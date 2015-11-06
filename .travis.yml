@@ -1,8 +1,18 @@
 before_install:
-  - sudo apt-get install libbluetooth-dev
-  
+- sudo apt-get install libbluetooth-dev
 language: cpp
-
 compiler:
-  - gcc
+- gcc
 script: make
+deploy:
+  provider: releases
+  api_key:
+    secure: x6OOmG7E4qX185tn1x/TcFzEnNTRWRiwU5wh+d1yRzIeRqdqBcsPIovXvdxDZ0WWHUuoPxm5NfEcb2DuKeKYVoeByoEXLvgy4aqdaiCWiV6a7e8e0/myKQJj3vZvaeGJb2ZjLHjFrBNBEg91qn3q1iFKtzv5NOg6BhhBvBtBTVJqXJ0mlz2SPuXkmbyUp3R+tUtesGw8dqJD55mOdtAw0F/3HDSfaJS6FY/JhfMR+EPH8XvmODRyl4jneGw7wsT6wEwJZ7QTlb7mtD+PK1BkmpgY6NFF1GB08+8MjkM1BoK4SAS0VLHc8woh7eemJ1TkHUu77dG6wPQ7cWEOGSozDuqhujnmGn5gIGOr2jIMN6rQEIcQ+rNg8ZQJ3RmfT37K2BJb2Ae6BE7Ab3WVl7P/FiAZYa3cX6wRNZoqq08nRYTK+aPOBauKufz40GjLSvBYBV2GDk3PUZU5WUXObO9idc7T/bcUeAsgS5+/49qlCpE7n9o+LD5RigXqdxlwNmlrE3q0a4noY+7gh3f9a5C80e8KV+ERoqlyO7N28zrdQs4+JiHf5u1/VMKpu+yi+jhC7DMbLvxDnmskZp7+C8hQvpcVyUEn/yz+O0W+kdvjYe/GrJndn6VtuqYoR+HHr0oDoQBM1nwwmXH/38p5hGvUpK5flKlucLry2NLM2Jj8J2I=
+  file:
+    - "Linux/project/walk_tuner/walk_tuner"
+    - "Linux/project/rme/rme"
+    - "Linux/project/dxl_monitor/dxlmonitor"
+  skip_cleanup: true
+  on:
+    repo: bhallier/HROS1-Framework
+    branch: dev
