@@ -8,7 +8,10 @@ deploy:
   provider: releases
   api_key:
     secure: QC9eTObOWqsCm17CqQQs8J73IikmPn4wyBfUC4N5stVGkK9bQGKjH1ExtSU5mUAPu2hCaLdJvnLrxDhBoujdfLnTxNhCnXupTPP8JuBGti8+PL25eJaT7GHR5khmOnDpK0iscxn0bxQ6eoexFTPKP2Qi1ugP4rwvSpP8W9NZKI00GnCN0eRTMhloi1Chl8/oKwec86yXNS8QyxxbDjWQjPQzI40TdDGoJKYdRies/gbggCYB0WNS3mNP2GXo0fza/YydgAYtnyoC/HhvNU7fDx2UEBsfPyEREr9vbw/gBlfsJw58z59a7SiYMCfDNt9ieR1SPh8d2iE4jbjclNCL8jh+2VSAT1br06YGTEqzgJYh+Y2mACu3w6uzk4d1TGJ4P32I/MAwZf1WMffGCrnbW2F8fNyzp3J8Pf0wZpXBR9J1Ko74NY3h1FrLuBPZ6wstABBdPmM445d1NiEgte7OHfLWXc3Wem7vPyvMMxSk/kD5XQGalW6n2GG5K0MUeE66YmTx4pPBaSSpnoS0bZV1OTunkkbyUN6w4Nbcf8s7CPdXJrvMiFSO5bB66TQbsOX8CReMJccvqyyeLUw2luhuqocI4PABEW8R9LqCTdhTtOWiovYQHIMhmMRgOPLpGrD640o83FLEo9mOaNQtE8BOUUIU1nKlZwF5Y/RPCPsJlhA=
-  file: "Linux/project/walk_tuner/walk_tuner"
+  file: 
+    - "Linux/project/walk_tuner/walk_tuner"
+    - "Linux/project/dxl_monitor/dxl_monitor"
+    - "Linux/project/rme/rme"
   skip_cleanup: true
   on:
     repo: bhallier/HROS1-Framework
