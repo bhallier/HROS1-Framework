@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/bhallier/HROS1-Framework.svg?branch=dev)](https://travis-ci.org/bhallier/HROS1-Framework)
 HROS1-Framework
 ===============
 
